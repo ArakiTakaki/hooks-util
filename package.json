@@ -10,7 +10,7 @@
     "build": "yarn build:cjs && yarn build:es"
   },
   "license": "MIT",
-    "dependencies": {
+  "dependencies": {
     "@types/react-wait": "^0.3.0",
     "copy-to-clipboard": "^3.1.0",
     "nano-css": "^5.1.0",
