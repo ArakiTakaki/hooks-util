@@ -1,3 +1,9 @@
+# build file
+
+/esm
+/lib
+
+
 # Logs
 logs
 *.log
