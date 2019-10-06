@@ -1,7 +1,9 @@
-import { useEffect } from 'react'
+import { useEffect } from 'react';
 
-export default (callback: () => void) => {
+const useDidMount = (callback: () => void) => {
   useEffect(() => {
-    callback()
-  }, [])
-}
+    callback();
+  }, []);
+};
+
+export default useDidMount;
