@@ -1,6 +1,6 @@
 import { useState, useCallback, ChangeEvent } from 'react'
 
-export const useInput = (
+export default (
   defaultParam: string
   ): { value: string, change: (e: ChangeEvent<HTMLInputElement>) => void } => {
   const [state, setState] = useState(defaultParam);

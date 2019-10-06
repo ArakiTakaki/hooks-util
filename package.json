@@ -5,6 +5,8 @@
   "scripts": {
     "start": "yarn storybook",
     "test": "jest",
+    "lint": "tslint ./src/**/*",
+    "lint:fix": "tslint ./src/**/* --fix",
     "build:cjs": "tsc",
     "build:es": "tsc -m esNext --outDir esm",
     "build": "yarn build:cjs && yarn build:es"
