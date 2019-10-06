@@ -1,7 +1,7 @@
 import { act, renderHook } from '@testing-library/react-hooks';
 import useDialog from '../useDialog';
 
-const setUp = (initialValue?: boolean) => renderHook(() => useToggle(initialValue));
+const setUp = (initialValue?: boolean) => renderHook(() => useDialog(initialValue));
 
 it('動作チェック', () => {
   {

@@ -1,5 +1,5 @@
 import { useEffect } from 'react'
 
-export default (callback: () => void) => {
-  useEffect(() => () => callback(), [])
+export default (callback: () => void | undefined) => {
+  useEffect(() => callback, [])
 }

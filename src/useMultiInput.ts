@@ -1,13 +1,22 @@
-import { useReducer, useCallback, ChangeEvent, ChangeEventHandler } from 'react';
+import { useState, useCallback, ChangeEvent, ChangeEventHandler } from 'react';
 import { TOnChange } from './interfaces';
 
-export default (initialState: {[key:string]: string} ):[{[key:string]: string}, ChangeEventHandler] => {
-  const [valueMap, setValueMap] = useState(initialState);
+export default (initialState: Array<HTMLInputElement> ):[Array<IUseMultiInput>, ChangeEventHandler] => {
+  const [values, setValues] = useState(initialState);
 
   const changeEvent = useCallback((e: ChangeEvent<HTMLInputElement>) => {
-    const map = { [e.currentTarget.name: e.currentTarget.value] };
-    setValueMap({ ...valueMap, ...map });
-  }, [valueMap]);
+    const map = values.map((value) => {
+      if (value.name === e.currentTarget.name) {
+        return {
+          name: e.currentTarget.name,
+          value: e.currentTarget.value,
+        };
+      } else{
+        return value;
+      }
+    });
+    setValues(map);
+  }, [values]);
 
-  return [valueMap, changeEvent];
+  return [values, changeEvent];
 }
