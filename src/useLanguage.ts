@@ -1,4 +1,4 @@
-import { useEffect } from 'react'
+import { useEffect } from 'react';
 type TLang =
   | 'aa'
   | 'ab'
@@ -17,10 +17,12 @@ type TLang =
   | 'ja'
   | 'kr'
   | 'tw'
-  | 'uk'
+  | 'uk';
 
-export default (lang: TLang) => {
+const useLanguage = (lang: TLang) => {
   useEffect(() => {
-    document.documentElement.lang = lang
-  }, [lang])
-}
+    document.documentElement.lang = lang;
+  }, [lang]);
+};
+
+export default useLanguage;

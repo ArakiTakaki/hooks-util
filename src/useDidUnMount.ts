@@ -1,5 +1,7 @@
-import { useEffect } from 'react'
+import { useEffect } from 'react';
 
-export default (callback: () => void | undefined) => {
-  useEffect(() => callback, [])
-}
+const useDidUnMount = (callback: () => void | undefined) => {
+  useEffect(() => callback, []);
+};
+
+export default useDidUnMount;

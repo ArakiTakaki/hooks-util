@@ -1,5 +1,4 @@
-type onMoveEvent = (cursor: { x: number; y: number }) => void;
-
+// type onMoveEvent = (cursor: { x: number; y: number }) => void;
 class MouseMove {
   /* カーソル実態位置 */
   public px = 0;
@@ -18,7 +17,7 @@ class MouseMove {
 
   public isDrag = false;
 
-  public onMove: onMoveEvent | null = null;
+  public onMove: any = null;
 
   constructor() {
     this.onMoveHandle = this.onMoveHandle.bind(this);
