@@ -26,7 +26,7 @@
     "storybook:build": "build-storybook",
     "storybook:upload": "gh-pages -d storybook-static --git \"$(which git)\"",
     "storybook:clean": "rimraf storybook-static",
-    "release": "semantic-release"
+    "publish": "npm publish ./"
   },
   "author": "arakitakaki <arakitakaki.work@gmail.com> (http://twitter.com/Araki_t_t)",
   "license": "MIT",
