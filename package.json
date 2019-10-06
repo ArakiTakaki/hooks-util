@@ -28,13 +28,8 @@
     "storybook:clean": "rimraf storybook-static",
     "release": "semantic-release"
   },
-  "husky": {
-    "hooks": {
-      "pre-push": "yarn lint && yarn clean && yarn build && yarn test"
-    }
-  },
-  "author": "@arakitakaki",
-  "license": "Unlicense",
+  "author": "arakitakaki <arakitakaki.work@gmail.com> (http://twitter.com/Araki_t_t)",
+  "license": "MIT",
   "dependencies": {
     "copy-to-clipboard": "^3.1.0",
     "nano-css": "^5.1.0",
