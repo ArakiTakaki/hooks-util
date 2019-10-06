@@ -1,7 +1,10 @@
 import { useState, useCallback, ChangeEvent, ChangeEventHandler } from 'react';
-import { TOnChange } from './interfaces';
 
-export default (initialState: Array<HTMLInputElement> ):[Array<IUseMultiInput>, ChangeEventHandler] => {
+export interface IUseMultiInput {
+  value: string;
+  name: string;
+}
+export default (initialState: Array<IUseMultiInput> ): [Array<IUseMultiInput>, ChangeEventHandler] => {
   const [values, setValues] = useState(initialState);
 
   const changeEvent = useCallback((e: ChangeEvent<HTMLInputElement>) => {

@@ -1,5 +1,9 @@
-export { default as useAccordion } from './useAccordion'
-export { default as useDidMount } from './useDidMount'
-export { default as useDidUnmount } from './useDidUnmount'
-export { default as useMouseRelativePosition } from './useMouseRelativePosition'
-export { default as useToggle } from './useToggle'
+export { default as useDialog } from './useDialog';
+export { default as useDidMount } from './useDidMount';
+export { default as useDidUnMount } from './useDidUnMount';
+export { default as useInput } from './useInput';
+export { default as useLanguage } from './';
+export { default as useMouseRelativePosition } from './useMouseRelativePosition';
+export { default as useMultiInput } from './useMultiInput';
+export { default as useTitle } from './useTitle';
+export { default as useToggle } from './useToggle';

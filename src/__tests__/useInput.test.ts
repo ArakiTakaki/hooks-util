@@ -1,8 +1,7 @@
 import { act, renderHook } from '@testing-library/react-hooks';
-import { ChangeEvent } from 'react';
 import useInput from '../useInput';
 
-const changeEvent: ChangeEvent<HTMLInputElement> = {
+const changeEvent: any = {
   currentTarget: {
     value: '',
   },

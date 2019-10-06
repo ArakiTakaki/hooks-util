@@ -2,7 +2,7 @@ import { useState, useCallback, ChangeEvent } from 'react'
 
 export default (
   defaultParam: string
-  ): { value: string, change: (e: ChangeEvent<HTMLInputElement>) => void } => {
+  ): { value: string, onChange: (e: ChangeEvent<HTMLInputElement>) => void } => {
   const [state, setState] = useState(defaultParam);
   const handle = useCallback(
     (e: ChangeEvent<HTMLInputElement>) => {
