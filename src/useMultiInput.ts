@@ -1,10 +1,10 @@
 import { useState, useCallback, ChangeEvent, ChangeEventHandler } from 'react';
 
-export interface IUseMultiInput {
+export interface UseMultiInput {
   value: string;
   name: string;
 }
-const useMultiInput = (initialState: IUseMultiInput[]): [IUseMultiInput[], ChangeEventHandler] => {
+const useMultiInput = (initialState: UseMultiInput[]): [UseMultiInput[], ChangeEventHandler] => {
   const [values, setValues] = useState(initialState);
 
   const changeEvent = useCallback(

@@ -1,7 +1,7 @@
 import { act, renderHook } from '@testing-library/react-hooks';
-import useMultiInput, { IUseMultiInput } from '../useMultiInput';
+import useMultiInput, { UseMultiInput } from '../useMultiInput';
 
-const defaultValues: IUseMultiInput[] = [
+const defaultValues: UseMultiInput[] = [
   {
     name: 'a',
     value: 'sample1',
@@ -14,7 +14,7 @@ const defaultValues: IUseMultiInput[] = [
 
 const createInputEventDummy = (value: any): any => ({ currentTarget: value });
 
-const testCases: IUseMultiInput[] = [
+const testCases: UseMultiInput[] = [
   {
     value: 'case1',
     name: 'a',
@@ -34,7 +34,7 @@ const testCases: IUseMultiInput[] = [
   },
 ];
 
-const setUp = (initialValue: IUseMultiInput[]) => renderHook(() => useMultiInput(initialValue));
+const setUp = (initialValue: UseMultiInput[]) => renderHook(() => useMultiInput(initialValue));
 
 it('型チェック', () => {
   const { result } = setUp(defaultValues);
