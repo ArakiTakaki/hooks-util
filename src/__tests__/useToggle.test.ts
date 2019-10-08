@@ -37,3 +37,18 @@ it('toggleチェック : default true', () => {
   });
   expect(result.current[0]).toBe(true);
 });
+
+it('固定値Toggleチェック', () => {
+  const { result } = setUp(true);
+
+  expect(result.current[0]).toBe(true);
+  act(() => {
+    result.current[1](true);
+  });
+  expect(result.current[0]).toBe(true);
+
+  act(() => {
+    result.current[1](false);
+  });
+  expect(result.current[0]).toBe(false);
+});
